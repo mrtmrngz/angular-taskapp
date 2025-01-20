@@ -1,0 +1,30 @@
+:host {
+  height: max-content;
+  position: sticky;
+  top: 0;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+li {
+  flex: 1;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+}
+
+button.active {
+  background: var(--primary-darken) !important;
+}
+
+@media screen and (max-width: 640px) {
+  :host {
+    position: static;
+  }
+}

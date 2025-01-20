@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-darken: rgba(255, 0, 110, .8);
+  --primary: rgba(255, 0, 110, 1);
+  --secondary: #ffe5ec;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background: radial-gradient(#023047, #000);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+input,textarea {
+  width: 100%;
+  font-family: "Roboto", serif;
+  flex: 1;
+  padding: 10px 10px 10px 15px;
+  border: 1px solid #dee0ea;
+  outline: none;
+  font-size: 14px;
+
+  &:focus {
+    border-color: rgba(0,0,0,0.4);
+  }
+}
+
+.primary-button {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: .2s ease-in all;
+
+  &:hover {
+    background: var(--primary-darken);
+  }
+}
+
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    height: fit-content;
+    margin-top: 50px;
+  }
+}

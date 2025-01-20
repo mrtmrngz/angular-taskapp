@@ -1,0 +1,15 @@
+<ng-container>
+  <dialog open>
+    <div class="backdrop" (click)="handleClose()"></div>
+    <div class="modal-wrapper">
+      <div class="modal-info">
+        <h3>Modal Title</h3>
+        <button (click)="handleClose()">X</button>
+      </div>
+
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </dialog>
+</ng-container>

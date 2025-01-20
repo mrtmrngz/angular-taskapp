@@ -1,0 +1,12 @@
+<app-modal (onClose)="handleClose()">
+  <form (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label>Username</label>
+      <input [(ngModel)]="enteredName" name="username" type="text" placeholder="Enter username">
+    </div>
+    <div class="button-wrapper">
+      <button class="primary-button">Submit</button>
+    </div>
+  </form>
+</app-modal>
+

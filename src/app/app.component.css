@@ -1,0 +1,36 @@
+main {
+  padding: 20px;
+  width: 1200px;
+  max-height: 500px;
+  overflow-y: auto;
+  display: flex;
+  gap: 50px;
+  border: 1px solid #dee0ea;
+  border-radius: 20px;
+  background: green;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    width: 950px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    width: 640px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    width: 300px;
+    flex-direction: column;
+  }
+}

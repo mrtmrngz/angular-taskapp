@@ -1,0 +1,15 @@
+<app-modal (onClose)="handleClose()">
+  <form (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label>Title</label>
+      <input [(ngModel)]="enteredTitle" type="text" placeholder="Enter task title" name="title">
+    </div>
+    <div class="input-group">
+      <label>Description</label>
+      <textarea [(ngModel)]="enteredDescription" rows="8" name="description" placeholder="Enter task description"></textarea>
+    </div>
+    <div class="button-wrapper">
+      <button class="primary-button">Submit</button>
+    </div>
+  </form>
+</app-modal>

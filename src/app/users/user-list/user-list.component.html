@@ -1,0 +1,16 @@
+<section class="users">
+  <ul class="user-list">
+    <li class="user-item">
+      <button class="primary-button" (click)="handleOpenModal()">Add New User</button>
+    </li>
+    @for(user of getUsers; track user.id) {
+      <li class="user-item">
+        <button [class.active]="user.id === selectedUserId" (click)="handleSelectUser(user.id)" class="primary-button">{{ user.username }}</button>
+      </li>
+    }
+  </ul>
+</section>
+
+@if(isAddUserModalOpen) {
+  <app-new-user-modal (onClose)="handleCloseModal()" />
+}

@@ -1,0 +1,38 @@
+.backdrop {
+  position: fixed;
+  background: rgba(0,0,0,0.4);
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 12;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 15;
+  background: white;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 20px;
+  max-height: 550px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.modal-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    background: transparent;
+    font-size: 22px !important;
+  }
+}

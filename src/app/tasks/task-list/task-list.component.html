@@ -1,0 +1,28 @@
+<section>
+  <div class="task-buttons">
+    <span class="username">{{getUsername}}'s Tasks</span>
+    <button class="primary-button" (click)="handleOpenModal()">Add Task</button>
+  </div>
+
+  <div class="tasks-wrapper">
+    @if (userTasks.length > 0) {
+      <ul class="task-list">
+        @for (task of userTasks; track task.id) {
+          <li>
+            <h1>{{ task.title }}</h1>
+            <p>{{task.description}}</p>
+            <div class="button-wrapper">
+              <div (click)="handleCompleteTask(task.id)" class="primary-button">Complete Task</div>
+            </div>
+          </li>
+        }
+      </ul>
+    } @else {
+      <h1>There is no task</h1>
+    }
+  </div>
+</section>
+
+@if (isAddTaskModalOpen) {
+  <app-new-task-modal [userId]="userId" (onClose)="handleCloseModal()" />
+}
